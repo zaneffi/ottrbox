@@ -102,6 +102,11 @@ export async function middleware(request: NextRequest) {
       condition: routes.admin.contains(route) && !user?.isAdmin,
       path: "/upload",
     },
+    // Redirect unauthenticated users on home page to website
+    {
+      condition: !user && route == "/",
+      path: "https://zaneffi.com",
+    },
     // Home page
     {
       condition: (!getConfig("general.showHomePage") || user) && route == "/",

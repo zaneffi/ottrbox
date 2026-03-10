@@ -47,12 +47,6 @@ const Header = () => {
     setCurrentRoute(router.pathname);
   }, [router.pathname]);
 
-  useEffect(() => {
-    if (!user && router.pathname === "/") {
-      window.location.href = "https://zaneffi.com";
-    }
-  }, [user, router.pathname]);
-
   const authenticatedLinks: NavLink[] = [
     {
       link: "/upload",
