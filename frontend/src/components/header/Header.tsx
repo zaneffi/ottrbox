@@ -114,12 +114,12 @@ const Header = () => {
   return (
     <MantineHeader height={HEADER_HEIGHT} mb={40} className={classes.root}>
       <Container className={classes.header}>
-        <Link href="/" passHref>
+        {user && <Link href="/" passHref>
           <Group>
             <Logo height={35} width={35} />
             <Text weight={600}>{config.get("general.appName")}</Text>
           </Group>
-        </Link>
+        </Link>}
         <Group spacing={5} className={classes.links}>
           <Group>{items} </Group>
         </Group>

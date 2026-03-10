@@ -21,8 +21,7 @@ import useConfig from "../hooks/config.hook";
 const useStyles = createStyles((theme) => ({
   inner: {
     display: "flex",
-    justifyContent: "center",
-    justifyItems: "center",
+    justifyContent: "space-between",
     paddingTop: `calc(${theme.spacing.md} * 4)`,
     paddingBottom: `calc(${theme.spacing.md} * 4)`,
   },
@@ -103,8 +102,8 @@ export default function Home() {
     <>
       <Meta title="Home" />
       <Container>
-        <div className={classes.inner}>
-          {/* <div className={classes.content}>
+        {/* <div className={classes.inner}>
+          <div className={classes.content}>
             <Title className={classes.title}>
               <FormattedMessage
                 id="home.title"
@@ -177,11 +176,11 @@ export default function Home() {
                 <FormattedMessage id="home.button.source" />
               </Button>
             </Group>
-          </div> */}
+          </div>
           <Group className={classes.image} align="center">
             <Logo width={200} height={200} />
           </Group>
-        </div>
+        </div> */}
       </Container>
     </>
   );
