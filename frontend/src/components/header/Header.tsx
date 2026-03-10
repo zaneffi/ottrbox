@@ -48,14 +48,10 @@ const Header = () => {
   }, [router.pathname]);
 
   useEffect(() => {
-    if (!user) {
+    if (!user && router.pathname === "/") {
       window.location.href = "https://zaneffi.com";
     }
-  }, [user]);
-
-  if (!user) {
-    return <></>;
-  }
+  }, [user, router.pathname]);
 
   const authenticatedLinks: NavLink[] = [
     {
