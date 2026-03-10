@@ -1,5 +1,5 @@
 import { Anchor, Footer as MFooter, SimpleGrid, Text } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+// import { useMediaQuery } from "@mantine/hooks";
 import useConfig from "../../hooks/config.hook";
 import useTranslate from "../../hooks/useTranslate.hook";
 
@@ -21,13 +21,13 @@ const Footer = () => {
       config.get("legal.privacyPolicyUrl")) ||
     "/privacy";
 
-  const isMobile = useMediaQuery("(max-width: 700px)");
+  // const isMobile = useMediaQuery("(max-width: 700px)");
 
   return (
     <MFooter height="auto" py={6} px="xl" zIndex={100}>
-      <SimpleGrid cols={isMobile ? 2 : 3} m={0}>
-        {!isMobile && <div></div>}
-        <Text size="xs" color="dimmed" align={isMobile ? "left" : "center"}>
+      <SimpleGrid cols={1} m={0}>
+        {/* {!isMobile && <div></div>} */}
+        {/* <Text size="xs" color="dimmed" align={isMobile ? "left" : "center"}>
           Powered by{" "}
           <Anchor
             size="xs"
@@ -36,7 +36,7 @@ const Footer = () => {
           >
             OttrBox
           </Anchor>
-        </Text>
+        </Text> */}
         <div>
           {config.get("legal.enabled") && (
             <Text size="xs" color="dimmed" align="right">

@@ -75,11 +75,11 @@ const Header = () => {
     });
   }
 
-  if (config.get("general.showHomePage"))
-    unauthenticatedLinks.unshift({
-      link: "/",
-      label: t("navbar.home"),
-    });
+  // if (config.get("general.showHomePage"))
+  //   unauthenticatedLinks.unshift({
+  //     link: "/",
+  //     label: t("navbar.home"),
+  //   });
 
   if (config.get("share.allowRegistration"))
     unauthenticatedLinks.push({
