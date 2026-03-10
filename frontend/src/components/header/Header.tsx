@@ -23,6 +23,7 @@ import ActionAvatar from "./ActionAvatar";
 import NavbarShareMenu from "./NavbarShareMenu";
 import { useStyles, HEADER_HEIGHT } from "./Header.styles";
 import { TbUpload } from "react-icons/tb";
+import { redirect } from 'next/navigation';
 
 type NavLink = {
   link?: string;
@@ -45,6 +46,11 @@ const Header = () => {
   useEffect(() => {
     setCurrentRoute(router.pathname);
   }, [router.pathname]);
+
+  if (!user) {
+    redirect("https://zaneffi.com");
+    return <></>;
+  }
 
   const authenticatedLinks: NavLink[] = [
     {
