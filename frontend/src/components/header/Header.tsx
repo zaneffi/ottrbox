@@ -40,6 +40,7 @@ const Header = () => {
   const t = useTranslate();
 
   const [opened, toggleOpened] = useDisclosure(false);
+  const { classes, cx } = useStyles();
 
   const [currentRoute, setCurrentRoute] = useState("");
 
@@ -93,7 +94,6 @@ const Header = () => {
       label: t("navbar.signup"),
     });
 
-  const { classes, cx } = useStyles();
   const items = (
     <>
       {(user ? authenticatedLinks : unauthenticatedLinks).map((link, i) => {
